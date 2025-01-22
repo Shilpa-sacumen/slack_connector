@@ -1,0 +1,267 @@
+74358 2025-01-21 16:06:59,961 my_logger  INFO  200
+74358 2025-01-21 16:06:59,961 my_logger  INFO  {
+    "ok": true,
+    "user": {
+        "id": "USLACKBOT",
+        "team_id": "T0877KXMYAY",
+        "name": "slackbot",
+        "deleted": false,
+        "color": "757575",
+        "real_name": "Slackbot",
+        "tz": "America/Los_Angeles",
+        "tz_label": "Pacific Standard Time",
+        "tz_offset": -28800,
+        "profile": {
+            "title": "",
+            "phone": "",
+            "skype": "",
+            "real_name": "Slackbot",
+            "real_name_normalized": "Slackbot",
+            "display_name": "Slackbot",
+            "display_name_normalized": "Slackbot",
+            "fields": null,
+            "status_text": "",
+            "status_emoji": "",
+            "status_emoji_display_info": [],
+            "status_expiration": 0,
+            "avatar_hash": "sv41d8cd98f0",
+            "always_active": true,
+            "first_name": "slackbot",
+            "last_name": "",
+            "image_24": "https://a.slack-edge.com/80588/img/slackbot_24.png",
+            "image_32": "https://a.slack-edge.com/80588/img/slackbot_32.png",
+            "image_48": "https://a.slack-edge.com/80588/img/slackbot_48.png",
+            "image_72": "https://a.slack-edge.com/80588/img/slackbot_72.png",
+            "image_192": "https://a.slack-edge.com/80588/marketing/img/avatars/slackbot/avatar-slackbot.png",
+            "image_512": "https://a.slack-edge.com/80588/img/slackbot_512.png",
+            "status_text_canonical": "",
+            "team": "T0877KXMYAY"
+        },
+        "is_admin": false,
+        "is_owner": false,
+        "is_primary_owner": false,
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "is_bot": false,
+        "is_app_user": false,
+        "updated": 0,
+        "is_email_confirmed": false,
+        "who_can_share_contact_card": "EVERYONE"
+    }
+}
+74358 2025-01-21 16:07:00,611 my_logger  ERROR  HTTPError occured : 404 Client Error: Not Found for url: https://slack.com/apl/conversations.list?user=USLACKBOT
+Traceback (most recent call last):
+  File "/home/shilpa/Desktop/slack_connector/src/slack_connector.py", line 54, in user_info
+    response.raise_for_status()
+  File "/home/shilpa/Desktop/slack_connector/venv/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://slack.com/apl/conversations.list?user=USLACKBOT
+74358 2025-01-21 16:07:02,008 my_logger  ERROR  HTTPError occured : 521 Server Error:  for url: https://sliack.com/apl/users.list
+Traceback (most recent call last):
+  File "/home/shilpa/Desktop/slack_connector/src/slack_connector.py", line 78, in user_group_list
+    response.raise_for_status()
+  File "/home/shilpa/Desktop/slack_connector/venv/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 521 Server Error:  for url: https://sliack.com/apl/users.list
+74358 2025-01-21 16:07:02,573 my_logger  INFO  200
+74358 2025-01-21 16:07:02,574 my_logger  INFO  {
+    "ok": true,
+    "usergroups": [
+        {
+            "id": "S089HHSBG3U",
+            "team_id": "T0877KXMYAY",
+            "is_usergroup": true,
+            "is_subteam": true,
+            "name": "Project1",
+            "description": "meeting",
+            "handle": "project1",
+            "is_external": false,
+            "date_create": 1737434497,
+            "date_update": 1737434509,
+            "date_delete": 0,
+            "auto_type": null,
+            "auto_provision": false,
+            "enterprise_subteam_id": "",
+            "created_by": "U087TURK6L8",
+            "updated_by": "U087TURK6L8",
+            "deleted_by": null,
+            "prefs": {
+                "channels": [],
+                "groups": []
+            },
+            "user_count": 4,
+            "channel_count": 0,
+            "is_section": false
+        },
+        {
+            "id": "S089W9GQ2E5",
+            "team_id": "T0877KXMYAY",
+            "is_usergroup": true,
+            "is_subteam": true,
+            "name": "Project2",
+            "description": "meeting",
+            "handle": "project2",
+            "is_external": false,
+            "date_create": 1737434948,
+            "date_update": 1737434957,
+            "date_delete": 0,
+            "auto_type": null,
+            "auto_provision": false,
+            "enterprise_subteam_id": "",
+            "created_by": "U087TURK6L8",
+            "updated_by": "U087TURK6L8",
+            "deleted_by": null,
+            "prefs": {
+                "channels": [
+                    "C087HR3700Z"
+                ],
+                "groups": []
+            },
+            "user_count": 2,
+            "channel_count": 0,
+            "is_section": false
+        }
+    ]
+}
+74358 2025-01-21 16:07:02,577 my_logger  INFO  200
+74358 2025-01-21 16:07:02,578 my_logger  INFO  {
+    "ok": "true",
+    "channels": [
+        {
+            "id": "C086YFZ9DDL",
+            "name": "all-shilpa",
+            "is_channel": "true",
+            "is_group": "false",
+            "is_im": "false",
+            "updated": 1735880230018
+        }
+    ]
+}
+74358 2025-01-21 16:07:02,580 my_logger  ERROR  HTTPError occured : 404 Client Error: None for url: https://slack.com/api/users.info
+Traceback (most recent call last):
+  File "/home/shilpa/Desktop/slack_connector/src/slack_connector.py", line 54, in user_info
+    response.raise_for_status()
+  File "/home/shilpa/Desktop/slack_connector/venv/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: None for url: https://slack.com/api/users.info
+74358 2025-01-21 16:07:03,097 my_logger  INFO  200
+74358 2025-01-21 16:07:03,098 my_logger  INFO  {
+    "ok": true,
+    "user": {
+        "id": "USLACKBOT",
+        "team_id": "T0877KXMYAY",
+        "name": "slackbot",
+        "deleted": false,
+        "color": "757575",
+        "real_name": "Slackbot",
+        "tz": "America/Los_Angeles",
+        "tz_label": "Pacific Standard Time",
+        "tz_offset": -28800,
+        "profile": {
+            "title": "",
+            "phone": "",
+            "skype": "",
+            "real_name": "Slackbot",
+            "real_name_normalized": "Slackbot",
+            "display_name": "Slackbot",
+            "display_name_normalized": "Slackbot",
+            "fields": null,
+            "status_text": "",
+            "status_emoji": "",
+            "status_emoji_display_info": [],
+            "status_expiration": 0,
+            "avatar_hash": "sv41d8cd98f0",
+            "always_active": true,
+            "first_name": "slackbot",
+            "last_name": "",
+            "image_24": "https://a.slack-edge.com/80588/img/slackbot_24.png",
+            "image_32": "https://a.slack-edge.com/80588/img/slackbot_32.png",
+            "image_48": "https://a.slack-edge.com/80588/img/slackbot_48.png",
+            "image_72": "https://a.slack-edge.com/80588/img/slackbot_72.png",
+            "image_192": "https://a.slack-edge.com/80588/marketing/img/avatars/slackbot/avatar-slackbot.png",
+            "image_512": "https://a.slack-edge.com/80588/img/slackbot_512.png",
+            "status_text_canonical": "",
+            "team": "T0877KXMYAY"
+        },
+        "is_admin": false,
+        "is_owner": false,
+        "is_primary_owner": false,
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "is_bot": false,
+        "is_app_user": false,
+        "updated": 0,
+        "is_email_confirmed": false,
+        "who_can_share_contact_card": "EVERYONE"
+    }
+}
+74358 2025-01-21 16:07:03,662 my_logger  INFO  200
+74358 2025-01-21 16:07:03,663 my_logger  INFO  {
+    "ok": true,
+    "usergroups": [
+        {
+            "id": "S089HHSBG3U",
+            "team_id": "T0877KXMYAY",
+            "is_usergroup": true,
+            "is_subteam": true,
+            "name": "Project1",
+            "description": "meeting",
+            "handle": "project1",
+            "is_external": false,
+            "date_create": 1737434497,
+            "date_update": 1737434509,
+            "date_delete": 0,
+            "auto_type": null,
+            "auto_provision": false,
+            "enterprise_subteam_id": "",
+            "created_by": "U087TURK6L8",
+            "updated_by": "U087TURK6L8",
+            "deleted_by": null,
+            "prefs": {
+                "channels": [],
+                "groups": []
+            },
+            "user_count": 4,
+            "channel_count": 0,
+            "is_section": false
+        },
+        {
+            "id": "S089W9GQ2E5",
+            "team_id": "T0877KXMYAY",
+            "is_usergroup": true,
+            "is_subteam": true,
+            "name": "Project2",
+            "description": "meeting",
+            "handle": "project2",
+            "is_external": false,
+            "date_create": 1737434948,
+            "date_update": 1737434957,
+            "date_delete": 0,
+            "auto_type": null,
+            "auto_provision": false,
+            "enterprise_subteam_id": "",
+            "created_by": "U087TURK6L8",
+            "updated_by": "U087TURK6L8",
+            "deleted_by": null,
+            "prefs": {
+                "channels": [
+                    "C087HR3700Z"
+                ],
+                "groups": []
+            },
+            "user_count": 2,
+            "channel_count": 0,
+            "is_section": false
+        }
+    ]
+}
+74358 2025-01-21 16:07:03,672 my_logger  INFO  200
+74358 2025-01-21 16:07:03,672 my_logger  INFO  {
+    "ok": true,
+    "channels": [
+        {
+            "id": "123",
+            "name": "shilpa"
+        }
+    ]
+}
